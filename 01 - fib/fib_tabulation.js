@@ -7,16 +7,17 @@
     
     To generate the next number of the sequence, we sum the previous two.
 */
-const fib = (n, memo = {}) => {
+const fib = (n) => {
+    const table = Array(n + 1).fill(0);
+
+    table[1] = 1;
     
-    if (n in memo) 
-        return memo[n];
-    
-    if (n <= 2)
-        return 1
-    
-    memo[n] = fib(n-1, memo) + fib(n - 2, memo); 
-    return memo[n];
+    for(let i=0; i<=n; i++)
+    {
+        table[i+1] += table[i];
+        table[i+2] += table[i];
+    }
+    return table[n];
 }
 
 console.log(fib(6));
