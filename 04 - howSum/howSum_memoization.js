@@ -1,4 +1,6 @@
 /*
+    howSum -> Combinatoric Problem
+    
     Write a function `howSum(targetSum, numbers) that takes in a 
     targetSum and an array of numbers as arguments. 
     
